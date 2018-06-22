@@ -137,7 +137,7 @@ namespace APIManagementTemplate
 
                         if(property != null)
                         {
-                            var idp = this.identifiedProperties.Where(pp => pp.name.Contains(apiObject.Value<string>("name") + "_manual-invoke_")).FirstOrDefault();
+                            var idp = this.identifiedProperties.Where(pp => pp.name.Contains(apiObject.Value<string>("name") + "_Request-invoke_")).FirstOrDefault();
                             idp.extraInfo = property.extraInfo;
                             idp.type = Property.PropertyType.LogicAppRevisionGa;
                         }
